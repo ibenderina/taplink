@@ -9,7 +9,8 @@ module.exports = {
   entry: `./src/index.js`,
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `../taplink`)
+    path: path.join(__dirname, `build`),
+    publicPath: process.env.NODE_ENV === 'development'? '/': 'https://kotya-kotya.ru'
   },
   devServer: {
     historyApiFallback: true,
@@ -32,7 +33,8 @@ module.exports = {
             {
               fallback: 'style-loader',
               use: ['css-loader', 'sass-loader']
-            })
+            }
+        )
       }
     ],
   },
@@ -45,7 +47,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: `react`,
     }),
-    new BaseHrefWebpackPlugin({ baseHref: process.env.NODE_ENV === 'development'? '/':'https://ibenderina.github.io/taplink' }),
+    new BaseHrefWebpackPlugin({
+      baseHref: process.env.NODE_ENV === 'development'? '/':'https://kotya-kotya.ru'
+    }),
     new ExtractTextPlugin({filename: 'style.css'}),
     new HtmlWebpackPlugin({
       template: "./public/index.html"

@@ -12,6 +12,10 @@
     background-color: #ededed;
     padding: 20px;
     text-align: center;
+
+    @media (max-width: 500px) {
+      padding: 10px 20px;
+    }
   }
 
   &__avatar {
@@ -21,11 +25,21 @@
     height: 90px;
     align-items: center;
     margin: 0 auto 10px auto;
+
+    @media (max-width: 500px) {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 5px auto;
+    }
   }
 
   &__name {
     display: block;
     margin-top: 30px;
+
+    @media (max-width: 500px) {
+      margin-top: 10px;
+    }
   }
 
   &__username {
@@ -45,13 +59,15 @@
   }
 
   &__list-header {
-    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 1.71rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
     font-weight: 300;
-    line-height: 1.55;
-    color: #000;
 
     @media (max-width: 720px) {
-      font-size: 14px;
+      font-size: 1rem;
     }
   }
 
@@ -98,17 +114,28 @@
 
   &__text {
     display: block;
-    color: #000;
+    color: #333333;
     line-height: 1.8;
-    font-size: 0.8em;
+    font-size: 1rem;
     font-weight: 500;
     vertical-align: middle;
+
+    @media (max-width: 720px) {
+      line-height: 1.4rem;
+      font-size: 0.8rem;
+    }
   }
 
   &__desc {
     display: block;
     font-weight: 300;
-    font-size: 0.8em;
-    color: #000;
+    font-size: 0.9rem;
+    line-height: 1.9rem;
+    color: #333333;
+
+    @media (max-width: 720px) {
+      line-height: 1.5;
+      font-size: 0.7rem;
+    }
   }
 }

@@ -1,6 +1,6 @@
-import {links, SocialLinks} from '../mock/mock';
+import {links, contactHeadline} from '../mock/mock';
 import BlockList from '../components/block-list';
-import SocialLinksList from '../components/social-links';
+import ContactList from './contact-list';
 
 export default () => {
   return (
@@ -18,9 +18,14 @@ export default () => {
               {links.map(BlockList)}
             </ul>
           </div>
-          <ul className="social-list">
-            {SocialLinks.map(SocialLinksList)}
-          </ul>
+
+          <div className="contacts">
+            <h2 className="taplink__list-header">{contactHeadline}</h2>
+
+            <ContactList />
+
+          </div>
+
         </div>
       </section>
   );

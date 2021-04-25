@@ -1,0 +1,39 @@
+.contacts {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 100px;
+    padding-bottom: 40px;
+  }
+
+  &__link {
+    background-size: 70px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+
+    @media (max-width: 720px) {
+      background-size: 50px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__link--telegram {
+    background-image: url("/img/tg.svg");
+  }
+
+  &__link--instagram {
+    background-image: url("/img/insta.svg");
+  }
+
+  &__link--whatsapp {
+    background-image: url("/img/whatsapp.svg");
+  }
+
+  &__link--vkontakte {
+    background-image: url("/img/vkontakte.svg");
+  }
+}
